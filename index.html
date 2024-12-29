@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Abhirup Bag</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Full page gradient animation */
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            color: #333;
+            background: linear-gradient(-45deg, #1abc9c, #3498db, #9b59b6, #e74c3c);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        /* Gradient animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(51, 51, 51, 0.9);
+            color: #fbf8f8;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f7f7f7;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #1abc9c;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('background1.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            animation: headingFadeIn 2s ease-in-out, textGlow 1.5s infinite alternate;
+        }
+
+        /* Heading fade-in animation */
+        @keyframes headingFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Text glow effect */
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #3498db, 0 0 30px #3498db, 0 0 40px #3498db; }
+            100% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9b59b6, 0 0 40px #9b59b6, 0 0 50px #9b59b6; }
+        }
+
+        .about, .skills {
+            display: flex;
+            gap: 20px;
+        }
+
+        .about img, .skills img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background: #ecf1c0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .portfolio-item img {
+            max-width: 30%;
+            border-radius: 10px;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+            background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%);
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #1abc9c;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #1abc9c, 0 0 20px #1abc9c;
+        }
+        .about p {
+        font-size: 1.6em; /* Increased font size */
+        line-height: 1.6; /* Adjust line spacing for readability */
+     }
+     
+     .skills {
+     display: flex;
+     flex-direction: column; /* Stack items vertically */
+     justify-content: center; /* Center items vertically */
+     align-items: center; /* Center items horizontally */
+     height: 50vh; /* Full viewport height for vertical centering */
+     text-align: justify; /* Center-align the text */
+     }
+
+     .skills  {
+     font-size: 1.6em; /* Optional: Adjust the font size if needed */
+     line-height: 1.2; /* Optional: Adjust line spacing for readability */
+     }
+
+
+    </style>
+</head>
+
+<body> 
+        
+    <header>
+        
+        <h1>Abhirup Bag</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div>
+            <h1>Hi, I'm Abhirup Bag</h1>
+            <p>Aspiring Software Developer | Creative Thinker</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about">
+                <img src="profile.jpg.png">
+                <p>
+                    Hello! I'm Abhirup Bag, a college student with a passion for software development. I enjoy learning new technologies and creating solutions that make a difference. In my free time, I love drawing, painting, and exploring origami.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="snake.png" alt="Project 1">
+                    <h3><a href="https://github.com/AbhiRik/Snake-Game">Project 1</a></h3>
+                    <h3><a href="https://abhirik.github.io/Snake-Game/">PLAY NOW !! (pc)</a></h3>
+                    <p>The Classic Snake Game made with a nostalgic feeling, Have fun !!!</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="calculator.png" alt="Project 2">
+                    <h3><a href="https://github.com/AbhiRik/codesoft_taskno.2">Project 2</a></h3>
+                    <p>Easy to use, a GUI-based WEB calculator.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="Brain.jpg" alt="Project 3">
+                    <h3><a href="https://github.com/AbhiRik/MindPal">Project 3</a></h3>
+                    <h3><a href="https://abhirik.github.io/MindPal/">USE IT !!</a></h3>
+                    <p>"MINDPAL" - A Student's mental well-being web app, to help them manage stress.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="contact.png" alt="Project 4">
+                    <h3><a href="https://github.com/AbhiRik/codesoft_taskno.5">Project 4</a></h3>
+                    <p>A contact book where you can add, update, and delete contacts in your list.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="atm.jpg" alt="Project 5">
+                    <h3><a href="https://github.com/AbhiRik/Brainwave_Matrix_Intern_1">Project 5</a></h3>
+                    <p>A Python-based ATM management system, where you can generate passwords to authenticate users.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="to_do.jpg" alt="Project 6">
+                    <h3><a href="https://github.com/AbhiRik/codsoft_taskno.1">Project 6</a></h3>
+                    <p>A Python GUI-based TO-DO List, where you can add, delete or modify tasks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                
+                    
+                     I specialize in:
+                    
+                        <li>Python Programming</li>
+                        <li>Languages: C, C++, Java (Basics)</li>
+                        <li>Web Development (HTML, CSS, JavaScript)</li>
+                        <li>Artificial Intelligence (Basics)</li>
+                        <li>Creative Design</li>
+                    
+                
+            </div>
+        </section>
+        
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p><center>If you'd like to get in touch, feel free to email me at <a href="mailto:abhirupbag1234@gmail.com">abhirupbag1234@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/abhirup-bag-734744282/">LinkedIn</a>.</center></p>
+        </section>
+        <script src="particle.js"></script>
+        
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Abhirup Bag. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+/* Full page gradient animation */
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: #333;
+    background: linear-gradient(-45deg, #1abc9c, #3498db, #9b59b6, #e74c3c);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Add animated heading effect */
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    animation: headingFadeIn 2s ease-in-out, textGlow 1.5s infinite alternate;
+}
+
+/* Heading fade-in animation */
+@keyframes headingFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Text glow effect */
+@keyframes textGlow {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #3498db, 0 0 30px #3498db, 0 0 40px #3498db; }
+    100% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9b59b6, 0 0 40px #9b59b6, 0 0 50px #9b59b6; }
+}
+
+/* Portfolio item hover effect */
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* Glow for footer links */
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #1abc9c, 0 0 20px #1abc9c;
+}
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure particles are behind the content */
+  }
+  
+  .container {
+    position: relative; /* Allow content to be positioned relative to the particles */
+    margin: 50px auto; /* Center the content horizontally */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Add a slight background to the content for better contrast */
+    border-radius: 5px;
+  }
+  @media screen and (max-width: 600px) {
+    /* Styles for screens smaller than 600px */
+    .container {
+      width: 90%; 
+    }
+    nav ul {
+      flex-direction: column; 
+    }
+  }
